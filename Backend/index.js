@@ -4,14 +4,17 @@ const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 
 const connectDB = require('./db_connection');
-const todoRoute = require('./routes/todoRoutes');
 const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 const port = process.env.PORT || 3000;
+const cors = require("cors");
 
 // Connect to the database
 connectDB();
+
+// Allow all origins UNSAFE!!!
+app.use(cors());
 
 // Swagger options
 const swaggerOptions = {
@@ -22,14 +25,29 @@ const swaggerOptions = {
       version: '1.0.0',
       description: 'A simple Express API with Swagger documentation',
     },
+    security: [
+      {
+        BearerAuth: [],  // This tells Swagger that the API uses Bearer token authentication
+      },
+    ],
+    components: {
+      securitySchemes: {
+        BearerAuth: {
+          type: 'http',
+          scheme: 'bearer',
+          bearerFormat: 'JWT',  // This specifies that the token format is JWT
+        },
+      },
+    },
     servers: [
       {
-        url: `http://localhost:${port}`,
+        url: `http://localhost:${port}`,  // The server URL
       },
     ],
   },
   apis: ['./routes/*.js'],  // Path to the API routes (where you document your endpoints)
 };
+
 
 // Initialize Swagger specification
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
@@ -38,8 +56,7 @@ const swaggerSpec = swaggerJsdoc(swaggerOptions);
 app.use(express.json());
 
 // Define routes
-app.use('/todos', todoRoute);
-app.use('/auth', authRoutes);
+app.use('/users', authRoutes);
 
 // Swagger UI documentation route
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
