@@ -10,7 +10,7 @@
 1. Copy and paste `.env` to the `Backend` directory
 2. `cd Backend`
 3. `npm install`
-4. `npm index.js`
+4. `node index.js`
 
 ## How to Open Swagger Documentation
 1. Run the backend
