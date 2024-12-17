@@ -1,16 +1,18 @@
 # How to Run the Project
 
-## Frontend
-1. `cd Frontend`
-2. `npm install`
-3. if above install is not working you might want to use this command `npm install --legacy-peer-deps`
-4. `npm start`
 
 ## Backend
 1. Copy and paste `.env` to the `Backend` directory
 2. `cd Backend`
 3. `npm install`
 4. `node index.js`
+
+## Frontend
+1. `cd Frontend`
+2. `npm install`
+3. if above install is not working you might want to use this command `npm install --legacy-peer-deps`
+4. `npm start`
+5. to use the app you might want to make new account or login to username:test, password:12345
 
 ## How to Open Swagger Documentation
 1. Run the backend
