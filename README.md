@@ -29,5 +29,4 @@
 - Because it is Node.js-friendly and free to deploy via MongoDB Atlas.
 
 ### Miscellaneous
-- Sorry for the bad naming convention, especially in React. I didn't have enough time to refactor.
-- I have not accounted for all display sizes, so the formatting might be a little bit off.
+- Sorry for the bad naming convention and bad layout, I didn't have time to fix it.
