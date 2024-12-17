@@ -1,4 +1,10 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures the body takes up full viewport height */
+    margin: 0;
+    background-color: #f4f4f9; /* Optional: Background color for the entire page */
+    color: #333;
 }
-
