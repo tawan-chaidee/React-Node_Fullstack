@@ -14,6 +14,7 @@ How to run Backend
 How to open swagger doc
 1. Run the backend
 2. open this url http://localhost:3000/api-docs/
+3. Note that to access certain routes, you must first click 'Authorize' in the top right. The Auth token can be found after logging in.
 
 Design Decision
 Why React? - Because I am comfortable using React, and it is commonly used.
