@@ -1,0 +1,83 @@
+
+.item-list-container {
+    padding: 60px;
+    position: relative;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between; /* Ensures the search bar is on the left and the button on the right */
+    align-items: center; /* Aligns items vertically centered */
+    margin-bottom: 20px;
+    height: 50px; /* Ensures proper height for the header */
+  }
+  
+  .add-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px; /* Adds space between the search bar and button */
+  }
+  
+  .add-button:hover {
+    background-color: #45a049;
+  }
+  
+  .search-bar {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px; /* Adjust width of the search bar */
+  }
+  
+  .item-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex; 
+    flex-direction: column-reverse; /* Appends new items to the bottom */
+    overflow-y: auto; /* Allows scrolling when the list grows */
+    max-height: 800px; /* Optional: limit the height of the list to enable scrolling */
+  }
+  
+  
+  .item {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .item-actions {
+    margin-top: 10px;
+  }
+  
+  .edit-button, .delete-button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .edit-button {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .delete-button {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .edit-button:hover {
+    background-color: #45a049;
+  }
+  
+  .delete-button:hover {
+    background-color: #e53935;
+  }
+  
