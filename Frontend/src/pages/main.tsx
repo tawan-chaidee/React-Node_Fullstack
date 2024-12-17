@@ -93,6 +93,8 @@ const Main: React.FC = () => {
 
   return (
     <>
+      <Spacer height="120px"/>
+
       <NavBar />
       <Spacer height="20px"/>
       <div className="container">

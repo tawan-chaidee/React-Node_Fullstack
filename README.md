@@ -3,7 +3,8 @@
 ## Frontend
 1. `cd Frontend`
 2. `npm install`
-3. `npm run`
+3. if above install is not working you might want to use this command `npm install --legacy-peer-deps`
+4. `npm start`
 
 ## Backend
 1. Copy and paste `.env` to the `Backend` directory
@@ -29,3 +30,4 @@
 
 ### Miscellaneous
 - Sorry for the bad naming convention, especially in React. I didn't have enough time to refactor.
+- I have not accounted for all display sizes, so the formatting might be a little bit off.

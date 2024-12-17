@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
   return (
     <div>
       <div className="navbar">
-        <div className="todo-list-header">Todo List</div>
+        <div className="todo-list-header">User Management</div>
         {isLoggedIn ? (
           <div className="user-profile" onClick={handleLogout}>
             <FontAwesomeIcon icon={faSignOutAlt} size="2x" />
